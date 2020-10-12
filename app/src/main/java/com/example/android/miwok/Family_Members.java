@@ -11,7 +11,7 @@ public class Family_Members extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_family__members);
+        setContentView(R.layout.word_list);
         ArrayList<word> words = new ArrayList<word>();
         words.add(new word("father", "әpә"));
         words.add(new word("mother", "әṭa"));
@@ -42,7 +42,7 @@ public class Family_Members extends AppCompatActivity {
         wordAdapter adapter = new wordAdapter(this, words);
 //        ArrayAdapter<word> itemAdapter = new ArrayAdapter(Numbers.this,R.layout.new_layout, words);
 
-        ListView rootView = (ListView) findViewById(R.id.family_list);
+        ListView rootView = (ListView) findViewById(R.id.list);
         rootView.setAdapter(adapter);
     }
 }
