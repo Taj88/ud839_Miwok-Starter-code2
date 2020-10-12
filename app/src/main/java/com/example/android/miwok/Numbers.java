@@ -12,19 +12,24 @@ public class Numbers extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
-        ArrayList<String> words = new ArrayList<>();
-        words.add("One");
-        words.add("Two");
-        words.add("Three");
-        words.add("Four");
-        words.add("Five");
-        words.add("Six");
-        words.add("Seven");
-        words.add("Eight");
-        words.add("Nine");
-        words.add("Ten");
+        ArrayList<word> words = new ArrayList<word>();
+        words.add(new word("One","lutti"));
+        words.add(new word("Two","otiiko"));
+        words.add(new word("Three","tolookosu"));
+        words.add(new word("Four","oyyisa"));
+        words.add(new word("Five","massokka"));
+        words.add(new word("Six","temmokka"));
+        words.add(new word("Seven","kenekaku"));
+        words.add(new word("Eight","kawinta"));
+        words.add(new word("Nine","wo'e"));
+        words.add(new word("Ten","na'aacha"));
+
+
+
 
 //        int lg=0;
+
+
 //        while (lg<10) {
 //            ListView rootView= (ListView) findViewById(R.id.number_list);
 //            ArrayAdapter<String>itemAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,words);
@@ -34,8 +39,11 @@ public class Numbers extends AppCompatActivity {
 //            rootView.addView(number);
 //        lg++;
 //        }
+
+        wordAdapter adapter = new wordAdapter(this, words);
+//        ArrayAdapter<word> itemAdapter = new ArrayAdapter(Numbers.this,R.layout.new_layout, words);
+
         ListView rootView = (ListView) findViewById(R.id.number_list);
-        ArrayAdapter<String> itemAdapter = new ArrayAdapter(Numbers.this,R.layout.new_layout, words);
-        rootView.setAdapter(itemAdapter);
+        rootView.setAdapter(adapter);
     }
 }

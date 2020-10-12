@@ -6,6 +6,7 @@ public class word {
 
 
     private String mMiwokTranslation;
+
     public word(String defaultTranslation,String miwokTranslation){
         mDefaultTranslation=defaultTranslation;
         mMiwokTranslation=miwokTranslation;

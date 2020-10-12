@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
  });
 
         final TextView color = (TextView) findViewById(R.id.colors);
+        assert color != null;
         color.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
